@@ -3,6 +3,7 @@
 <head>
   <title>Tamil Movies Quiz</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     /* Additional custom styles */
     body {
@@ -52,7 +53,10 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
     }
-
+	 .carousel-item {
+      background-color: rgba(0, 255, 255, 0.8); /* Transparent background for carousel items */
+      padding: 20px;
+    }
     .cta-button:hover {
       background-color: #0056b3;
     }
@@ -68,6 +72,12 @@
       background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
       padding: 20px;
       text-align: center;
+    }
+      #features {
+      margin-bottom: 60px; /* Add margin to the bottom of the carousel section */
+    }
+     #cta {
+      margin-top: 60px; /* Add margin to the top of the download section */
     }
   </style>
 </head>
@@ -99,21 +109,8 @@
             <h3>Hide&Seek</h3>
             <p>Uncover hidden facts and trivia about your favorite Tamil movies.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="screenshot">
-    <div class="content">
-      <h2>App Screenshots</h2>
-      <img src="screenshot1.png" alt="Screenshot 1" class="app-screenshot">
-      <img src="screenshot2.png" alt="Screenshot 2" class="app-screenshot">
-      <img src="screenshot3.png" alt="Screenshot 3" class="app-screenshot">
-    </div>
-  </section>
-
-  <section id="cta">
+        </script>
+<section id="cta">
     <div class="content">
       <h2>Get Started Today</h2>
       <p>Download our app now and enjoy the amazing features!</p>
@@ -124,7 +121,6 @@
   <footer>
     <p>&copy; 2023 Tamil Movies Quiz Android App. All rights reserved.</p>
   </footer>
-
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
