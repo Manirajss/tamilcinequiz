@@ -7,13 +7,15 @@
     /* Additional custom styles */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
+      background-image: url("https://srifistorage.blob.core.windows.net/movie-assets/home.jpg");
+      background-size: cover;
       margin: 0;
       padding: 0;
+      color: #fff; /* Adjust text color for dark background */
     }
 
     header {
-      background-color: #007bff;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
       padding: 20px;
       color: #fff;
       text-align: center;
@@ -22,11 +24,11 @@
     h1 {
       font-size: 36px;
       margin: 0;
+      color: #fff;
     }
 
     p {
       font-size: 18px;
-      color: #fff;
       margin: 10px 0;
     }
 
@@ -63,7 +65,7 @@
     }
 
     footer {
-      background-color: #f4f4f4;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
       padding: 20px;
       text-align: center;
     }
@@ -78,12 +80,27 @@
   <section id="features">
     <div class="content">
       <h2>Key Features</h2>
-      <ul>
-        <li>Guess the Actor</li>
-        <li>Connections</li>
-        <li>LeaderBoard</li>
-        <li>Hide&Seek</li>
-      </ul>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h3>Guess the Actor</h3>
+            <p>Test your knowledge by guessing the actor from their movie stills.</p>
+          </div>
+          <div class="carousel-item">
+            <h3>Connections</h3>
+            <p>Discover the connections between movies, actors, and directors.</p>
+          </div>
+          <div class="carousel-item">
+            <h3>LeaderBoard</h3>
+            <p>Compete with other players and climb to the top of the leaderboard.</p>
+          </div>
+          <div class="carousel-item">
+            <h3>Hide&Seek</h3>
+            <p>Uncover hidden facts and trivia about your favorite Tamil movies.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -107,5 +124,15 @@
   <footer>
     <p>&copy; 2023 Tamil Movies Quiz Android App. All rights reserved.</p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Activate carousel
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+  </script>
 </body>
 </html>
