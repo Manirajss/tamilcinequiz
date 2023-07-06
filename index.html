@@ -9,8 +9,8 @@
     body {
       font-family: Arial, sans-serif;
       background-image: url("https://i.imgur.com/7z83M4J.jpeg");
-      background-size: 60% auto; /* Adjust the background size */
-      background-position: center; /* Center the background image */
+      background-size: cover;
+      background-position: center;
       margin: 0;
       padding: 0;
       color: #fff; /* Adjust text color for dark background */
@@ -74,11 +74,14 @@
       padding: 20px;
       text-align: center;
     }
-      #features {
-      margin-bottom: 60px; /* Add margin to the bottom of the carousel section */
+    
+    /* Custom styles for improved UX */
+    #features {
+      margin-bottom: 5px; /* Add margin to the bottom of the carousel section */
     }
-     #cta {
-      margin-top: 60px; /* Add margin to the top of the download section */
+
+    #cta {
+      margin-top: 5px; /* Add margin to the top of the download section */
     }
   </style>
 </head>
@@ -92,6 +95,14 @@
     <div class="content">
       <h2>Key Features</h2>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
         <!-- Slides -->
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -110,16 +121,20 @@
             <h3>Hide&Seek</h3>
             <p>Uncover hidden facts and trivia about your favorite Tamil movies.</p>
           </div>
-        </script>
-<section id="cta">
-  <div class="content">
-    <h2>Get Started Today</h2>
-    <p>Download our app now and enjoy the amazing features!</p>
-    <a href="https://play.google.com/store/apps/details?id=com.srifitech.tamilcinema&utm_source=site&utm_medium=organic&utm_campaign=site" class="cta-button">
-      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="width: 250px; height: auto;">
-    </a>
-  </div>
-</section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="content">
+      <h2>Get Started Today</h2>
+      <p>Download our app now and enjoy the amazing features!</p>
+      <a href="https://play.google.com/store/apps/details?id=com.srifitech.tamilcinema&utm_source=site&utm_medium=organic&utm_campaign=site" class="cta-button">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="width: 200px; height: auto;">
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2023 Tamil Movies Quiz Android App. All rights reserved.</p>
@@ -129,9 +144,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     // Activate carousel
-    $(document).ready(function(){
-      $('.carousel').carousel();
-    });
+    $('.carousel').carousel({
+        interval: 3000, // Adjust the slide transition time (in milliseconds)
+      });
   </script>
 </body>
 </html>
